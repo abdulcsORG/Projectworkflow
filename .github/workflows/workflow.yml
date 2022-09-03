@@ -1,12 +1,11 @@
 ﻿name: PipelineWorkflow
 
 on:
+  # Triggers the workflow on push or pull request events but only for the "Child_Branch2" branch
   push:
-    branches:
-      - child_Branch2
-   pull_request:
-     branches:
-       - child_Branch2
+    branches: [ "Child_Branch2" ]
+  pull_request:
+    branches: [ "Child_Branch2" ]
 
 jobs:
     build:
